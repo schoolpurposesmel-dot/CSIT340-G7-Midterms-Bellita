@@ -1,11 +1,14 @@
 import Bio from "./Bio";
 import StatCard from "./StatCard";
+import Hire from "./Hire";
  
-export default function Profile({ followers, rate, handleFollow, handleAddRate, handleReset }) {
+function Profile({ followers, rate, handleFollow, handleAddRate, handleReset }) {
   return (
     <div className="flex items-end justify-between bg-[#F5E7C6] px-20 py-10">
       <div>
+        
         <Bio />
+        <Hire rate={rate} />
         <div className="mt-6 flex gap-6">
           <StatCard value={followers} label="Followers" />
           <StatCard value={rate} label="PHP per hour" />
@@ -36,3 +39,4 @@ export default function Profile({ followers, rate, handleFollow, handleAddRate, 
   );
 }
  
+export default Profile;
