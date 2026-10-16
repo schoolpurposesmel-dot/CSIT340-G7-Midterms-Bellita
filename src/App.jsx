@@ -4,6 +4,7 @@ import Bio from "./components/Bio";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Repositories from "./components/Repositories";
+import StatCard from "./components/StatCard";
 
 
 function App() {
@@ -43,6 +44,11 @@ function App() {
       
       <Navbar />
       <Bio />
+      <StatCard
+        followers={followers}
+        rate={rate}
+     />
+
       <Profile
         followers={followers}
         rate={rate}
@@ -50,6 +56,8 @@ function App() {
         onAddRate={handleAddRate}
         onReset={handleReset}
       />
+
+      
       <Repositories
         portfolioStars={portfolioStars}
         todoStars={todoStars}
@@ -59,8 +67,8 @@ function App() {
         handleStarDotfiles={handleStarDotfiles}
 
       />
-     
 
+      
       
     </div>
   );
