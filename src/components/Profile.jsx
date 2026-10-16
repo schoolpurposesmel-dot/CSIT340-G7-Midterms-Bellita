@@ -1,9 +1,11 @@
-  function Profile({ followers, rate, onFollow, onAddRate, onReset }) {
-    return(
+import StatCard from "./StatCard";
+
+function Profile({ followers, rate, onFollow, onAddRate, onReset }) {
+  return (
     <div className="flex items-end justify-between bg-[#F5E7C6] px-20 py-10">
-      <div>
-       
-       
+      <div className="flex gap-6">
+        <StatCard label="Followers" value={followers} />
+        <StatCard label="PHP per hour" value={rate} />
       </div>
 
       <div className="flex gap-4">
@@ -26,8 +28,8 @@
           Reset
         </button>
       </div>
-      </div>
-      )
-  }
+    </div>
+  );
+}
 
-  export default Profile;
+export default Profile;
